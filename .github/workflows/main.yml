@@ -16,8 +16,7 @@ jobs:
       - name: Execute ddosify 
         uses: ./
         with:
-          args: "-t example.com"
-      
+          args: "-t lottpower.org -n 100000"
       - name: Upload Results
         uses: actions/upload-artifact@v2
         with:
