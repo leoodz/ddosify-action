@@ -1,0 +1,10 @@
+- name: Ddosify Test
+  uses: QAInsights/ddosify-action@v1.0.1
+  with:
+    args: "-t lottpower.org"
+    
+- name: Upload Results
+  uses: actions/upload-artifact@v2
+  with:
+    name: ddosify-results
+    path: ./*.log
