@@ -29,4 +29,4 @@ jobs:
           url: ${{ secrets.url }}
           
     - name: Run Ddosify
-      run: ddosify -t "$url -d 1000 -n 100000"
+      run: ddosify -t "$env:url -d 1000 -n 100000"
