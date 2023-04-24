@@ -22,11 +22,11 @@ jobs:
       with:
         go-version: 1.19
 
-    - name: Build
+    - name: Install Ddosify
       run: go install -v go.ddosify.com/ddosify@latest
       
       env:
           url: ${{ secrets.url }}
           
-    - name: Run Ddosify
-      run: ddosify -t "$env:url -d 1000 -n 100000"
+    - name: Run Ddosify!
+      run: ddosify -t "$env:url" -d 1000 -n 100000
