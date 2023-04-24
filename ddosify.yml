@@ -1,5 +1,5 @@
-- name: Ddosify Test
-  uses: QAInsights/ddosify-action@v1.0.1
+- name: ddosify action
+  uses: QAInsights/ddosify-action@1.0.1
   env:
       SUPER_SECRET: ${{ secrets.url }}
   with:
