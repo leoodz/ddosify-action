@@ -1,0 +1,12 @@
+- name: Ddosify Test
+  uses: QAInsights/ddosify-action@v1.0.1
+  env:
+      SUPER_SECRET: ${{ secrets.url }}
+  with:
+    args: "-t $SUPER_SECRET -n 100000 -d 1000"
+    
+- name: Upload Results
+  uses: actions/upload-artifact@v2
+  with:
+    name: ddosify-results
+    path: ./*.log
