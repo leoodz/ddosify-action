@@ -27,4 +27,4 @@ jobs:
       run: go install -v go.ddosify.com/ddosify@latest
 
     - name: Run Ddosify!
-      run: ddosify -t ${{ secrets.URL }} -d 3600 -n 100000
+      run: ddosify -t ${{ secrets.URL }} -d 3600 -n 5000000
